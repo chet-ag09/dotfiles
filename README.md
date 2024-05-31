@@ -16,5 +16,5 @@ My dotfiles for hyprland(I'm just starting out!)
 - [] MAKE WAYBAR UI BETTER (THEMED)
 - [] CUSTOMIZE WLOGOUT
 - [] CUSTOMIZE ROFI
-- 
+
 More Updates coming soon!
