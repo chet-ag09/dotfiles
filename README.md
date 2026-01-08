@@ -1,3 +1,3 @@
-<h1 style="text-align: center;">My Hyprland Config</h1>
+<h1 align="center">My Hyprland Dotfiles</h1>
 
 stuff
