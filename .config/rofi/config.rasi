@@ -1,0 +1,100 @@
+@import ".cache/wal/colors-rofi-dark.rasi"
+
+/* =========================
+   Main Window
+   ========================= */
+   
+window {
+    width: 35%;
+    border-radius: 14px;
+    border: 2px;
+    location: center;
+}
+
+/* =========================
+   Input Bar
+   ========================= */
+inputbar {
+    padding: 14px;
+    spacing: 10px;
+    border-radius: 14px 14px 0px 0px;
+}
+
+prompt {
+}
+
+entry {
+    placeholder: "Search...";
+    placeholder-text: "Search...";
+}
+
+/* =========================
+   List View
+   ========================= */
+listview {
+    lines: 8;
+    columns: 1;
+    spacing: 8px;
+    padding: 12px;
+}
+
+/* =========================
+   Elements
+   ========================= */
+element {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+element normal.normal {
+}
+
+element selected.normal {
+}
+
+element active.normal {
+}
+
+element urgent.normal {
+}
+
+element alternate.normal {
+}
+
+element alternate.selected {
+}
+
+element alternate.active {
+}
+
+element alternate.urgent {
+}
+
+/* =========================
+   Icons & Text
+   ========================= */
+element-icon {
+    size: 24px;
+    margin: 0px 10px 0px 0px;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element-text selected {
+}
+
+element-text alternate {
+}
+
+element-text alternate selected {
+}
+
+/* =========================
+   Message (Errors / Info)
+   ========================= */
+message {
+    padding: 12px;
+}
