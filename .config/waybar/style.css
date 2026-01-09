@@ -10,17 +10,17 @@
 }
 
 window#waybar {
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     color: @foreground;
 }
 
 tooltip {
-  background: rgba(43, 48, 59, 0.5);
-  border: 1px solid rgba(100, 114, 125, 0.5);
+    background: rgba(43, 48, 59, 0.5);
+    border: 1px solid rgba(100, 114, 125, 0.5);
 }
 
 tooltip label {
-  color: @foreground;
+    color: @foreground;
 }
 
 #workspaces {
@@ -60,4 +60,21 @@ tooltip label {
     color: @background;
     padding: 0 5px;
     border-radius: 100px;
+}
+
+#taskbar {
+    transition: all 250ms ease-in-out;
+
+}
+
+#taskbar button {
+    padding: 0 8px;
+    margin: 0 2px;
+    border-radius: 100px;
+    background: @background;
+    color: @foreground;
+    transition: all 200ms ease-in-out;
+    min-height: 28px;
+    min-width: 28px;
+
 }
