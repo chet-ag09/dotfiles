@@ -1,3 +1,3 @@
 <h1 align="center">My Hyprland Dotfiles</h1>
 
-stuff
+i skipped studying for my chem exam to work on ts
