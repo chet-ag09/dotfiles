@@ -1,15 +1,15 @@
 {
     "layer": "top",
     "style": "~/.config/waybar/style.css",
-    "position": "top",
-    "width": 500,
-    "height": 30,
-    "halign": "center",
-    "margin-top": 10,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
     "modules-center": [
-        "clock",
-        "hyprland/workspaces",
+        "clock"
+    ],
+    "modules-right": [
         "network",
+        "pulseaudio",
         "battery",
         "custom/wlogout"
     ],
@@ -57,7 +57,7 @@
     "network": {
         "interface": "wlan0",
         "format": "{ifname}",
-        "format-wifi": "{essid} ",
+        "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} 󰊗",
         "format-disconnected": "", //An empty format will hide the module.
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",
@@ -69,21 +69,11 @@
     "hyprland/workspaces": {
         "format": "{name}",
         "on-click": "activate",
-        "sort-by-number": true,
-        "all-outputs": true,
-        "active-only": false,
-        "persistent-workspaces": {
-            "*": [
-                1,
-                2,
-                3,
-                4
-            ]
-        },
-        "custom/wlogout": {
-            "format": "",
-            "on-click": "wlogout --protocol layer-shell",
-            "tooltip": "Power menu"
-        }
+        "sort-by-number": true
+    },
+    "custom/wlogout": {
+        "format": "",
+        "on-click": "wlogout --protocol layer-shell",
+        "tooltip": "Power menu"
     }
 }
