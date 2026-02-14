@@ -48,11 +48,9 @@ tooltip label {
 
 #clock,
 #battery,
-#network,
-#pulseaudio {
+#network {
     background-color: @color4;
     color: @background;
-    padding: 0 5px;
     margin: 0 10px;
     border-radius: 100px;
     font-weight: 500;
