@@ -1,5 +1,5 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "style": "~/.config/waybar/style.css",
     "position": "top",
     "width": 500,
