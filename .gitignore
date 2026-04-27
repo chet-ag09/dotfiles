@@ -1,5 +1,5 @@
 .config/hypr/wallpaper/*
 !.config/hypr/wallpaper/.gitkeep
-.config/hypr/waybar/config.jsonc
-.config/hypr/waybar/style.css
-.config/hypr/waybar/.current_theme
+.config/waybar/config.jsonc
+.config/waybar/style.css
+.config/waybar/.current_theme
