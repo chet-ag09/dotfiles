@@ -36,7 +36,7 @@ done
 echo "$NEXT" > "$STATE_FILE"
 
 # Set wallpaper
-swww img "$NEXT" \
+awww img "$NEXT" \
     --transition-type any \
     --transition-duration 1
 
@@ -52,5 +52,5 @@ wal -i "$NEXT" -n
 pkill waybar && waybar &
 ~/.spicetify/spicetify apply -n
 kitty @ set-colors --all ~/.cache/wal/colors-kitty.conf 2>/dev/null
-notify-send "Wallpaper" "Changing to: $(basename "$NEXT")"
 pkill mako && mako &
+notify-send "Wallpaper"
