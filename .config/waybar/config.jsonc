@@ -1,15 +1,15 @@
 {
-    "layer": "bottom",
+    "layer": "top",
     "style": "~/.config/waybar/style.css",
-    "position": "top",
-    "width": 500,
-    "height": 30,
-    "halign": "center",
-    "margin-top": 10,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
     "modules-center": [
-        "clock",
-        "hyprland/workspaces",
+        "clock"
+    ],
+    "modules-right": [
         "network",
+        "pulseaudio",
         "battery",
         "custom/wlogout"
     ],
@@ -29,11 +29,35 @@
     "clock": {
         "format-alt": "{:%a, %d. %b  %H:%M}"
     },
-
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+            "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                ""
+            ]
+        },
+        "scroll-step": 1,
+        "on-click": "pavucontrol",
+        "ignored-sinks": [
+            "Easy Effects Sink"
+        ]
+    },
     "network": {
         "interface": "wlan0",
         "format": "{ifname}",
-        "format-wifi": "{essid} ",
+        "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ipaddr}/{cidr} 󰊗",
         "format-disconnected": "", //An empty format will hide the module.
         "tooltip-format": "{ifname} via {gwaddr} 󰊗",
@@ -45,17 +69,7 @@
     "hyprland/workspaces": {
         "format": "{name}",
         "on-click": "activate",
-        "sort-by-number": true,
-        "all-outputs": true,
-        "active-only": false,
-        "persistent-workspaces": {
-            "*": [
-                1,
-                2,
-                3,
-                4
-            ]
-        }
+        "sort-by-number": true
     },
     "custom/wlogout": {
         "format": "",
