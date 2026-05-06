@@ -45,6 +45,9 @@ rm -rf ~/.cache/wal/*
 wal -i "$NEXT" -n 
 ~/.config/hypr/scripts/wal-hyprland.sh
 
+# start chromium with applied theme
+~/.config/hypr/scripts/set-chrome-theme.sh
+
 # set colors from pywal
 ~/.config/spicetify/pywal-spice.sh
 
@@ -53,4 +56,3 @@ pkill waybar && waybar &
 ~/.spicetify/spicetify apply -n
 kitty @ set-colors --all ~/.cache/wal/colors-kitty.conf 2>/dev/null
 pkill mako && mako &
-notify-send "Wallpaper"
