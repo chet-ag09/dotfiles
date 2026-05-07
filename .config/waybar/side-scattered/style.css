@@ -1,0 +1,94 @@
+@import url("../../.cache/wal/colors-waybar.css");
+
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font Propo", "Symbols Nerd Font";
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+window#waybar 
+{
+    background: @background;
+    color: @foreground;
+}
+
+tooltip 
+{
+    background: rgba(43, 48, 59, 0.5);
+    border: 1px solid rgba(100, 114, 125, 0.5);
+}
+
+tooltip label 
+{
+    color: @foreground;
+}
+
+#workspaces 
+{
+    transition: all 250ms ease-in-out;
+}
+
+#workspaces button 
+{
+    padding: 10px 0;
+    transition: all 200ms ease-in-out;
+    background: @background;
+    color: @foreground;
+    margin: 2px 2px;
+    border-radius: 100px;
+}
+
+#workspaces button.active 
+{
+    min-width: 50px;
+    transition: all 250ms ease-in-out;
+    background: @color4;
+    color: @background;
+}
+
+#clock,
+#battery,
+#network
+{
+    background-color: @color4;
+    color: @background;
+    padding: 10px 0;
+    margin: 2px 2px;
+    border-radius: 100px;
+    font-weight: 500;
+}
+
+#clock
+{
+    background-color: @background;
+    color: @foreground;
+}
+
+#custom-wlogout 
+{
+    background: @color4;
+    color: @background;
+    padding: 10px 0;
+    border-radius: 100px;
+}
+
+#taskbar 
+{
+    transition: all 250ms ease-in-out;
+
+}
+
+#taskbar button 
+{
+    padding: 0 8px;
+    margin: 0 2px;
+    border-radius: 100px;
+    background: @background;
+    color: @foreground;
+    transition: all 200ms ease-in-out;
+    min-height: 28px;
+    min-width: 28px;
+}
