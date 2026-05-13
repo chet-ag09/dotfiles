@@ -41,8 +41,8 @@ tooltip label {
 #workspaces button.active {
     min-width: 50px;
     transition: all 250ms ease-in-out;
-    background: @color6;
-    color: @background;
+    background: @background;
+    color: @foreground;
     font-weight: 700;
 }
 

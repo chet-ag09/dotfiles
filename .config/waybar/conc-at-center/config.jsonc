@@ -59,7 +59,7 @@
     },
     "custom/wlogout": {
         "format": "",
-        "on-click": "wlogout --protocol layer-shell",
+        "on-click": "wlogout -b 4",
         "tooltip": "Power menu"
     }
 }
