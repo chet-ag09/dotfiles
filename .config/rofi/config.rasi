@@ -1,5 +1,7 @@
 @import ".cache/wal/colors-rofi-dark.rasi"
 
+
+
 /* =========================
    Main Window
    ========================= */
@@ -9,6 +11,11 @@ window {
     border-radius: 14px;
     border: 2px;
     location: center;
+}
+
+configuration {
+    show-icons: true;
+    icon-theme: "Qogir";
 }
 
 /* =========================
