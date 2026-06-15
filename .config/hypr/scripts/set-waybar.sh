@@ -3,6 +3,7 @@
 CONFIG_DIR="$HOME/.config/waybar"
 ACTIVE_CONFIG="$CONFIG_DIR/config.jsonc"
 ACTIVE_STYLE="$CONFIG_DIR/style.css"
+ACTIVE_STYLE="$CONFIG_DIR/bottom.css"
 STATE_FILE="$CONFIG_DIR/.current_theme"
 
 themes=()
