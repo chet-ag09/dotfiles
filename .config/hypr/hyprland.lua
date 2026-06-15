@@ -1,61 +1,35 @@
 require("assets.keybinds")
+require("assets.decoration")
 
 hl.monitor({
     output   = "eDP-1",
-    mode     = "preferred",
+    mode     = "1920x1080@144",
+    position = "auto",
+    scale    = "1",
+})
+
+hl.monitor({
+    output   = "HDMI-A-1",
+    mode     = "1920x1080@60",
     position = "auto",
     scale    = "1",
 })
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("QT_QPA_PLATFORMTHEME","kde")
+hl.env("QT_QPA_PLATFORM","wayland")
 
-hl.config({
-    general = {
-        gaps_in  = 5,
-        gaps_out = 20,
+hl.on("hyprland.start", function()
+hl.exec_cmd("waybar")
+hl.exec_cmd("mako")
+hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic 24")
+hl.exec_cmd("nm-applet")
+hl.exec_cmd("awww-daemon")
+end
+)
 
-        border_size = 2,
 
-        col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
-        },
-        resize_on_border = false,
-
-        -- Please see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
-        allow_tearing = false,
-
-        layout = "dwindle",
-    },
-
-    decoration = {
-        rounding       = 20,
-        rounding_power = 2,
-
-        -- Change transparency of focused and unfocused windows
-        active_opacity   = 0.8,
-        inactive_opacity = 0.7,
-
-        shadow = {
-            enabled      = true,
-            range        = 4,
-            render_power = 3,
-            color        = 0xee1a1a1a,
-        },
-
-        blur = {
-            enabled   = true,
-            size      = 10,
-            passes    = 3,
-            vibrancy  = 0.42,
-        },
-    },
-
-    animations = {
-        enabled = true,
-    },
-})
 
 -- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })
@@ -130,8 +104,8 @@ hl.config({
 
 hl.config({
     misc = {
-        force_default_wallpaper = -1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo   = false, -- If true disables the random hyprland logo / anime girl background. :(
+        force_default_wallpaper = 1,    -- Set to 0 or 1 to disable the anime mascot wallpapers
+        disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
     },
 })
 
@@ -158,11 +132,7 @@ hl.config({
     },
 })
 
-hl.gesture({
-    fingers = 3,
-    direction = "horizontal",
-    action = "workspace"
-})
+
 
 -- Example per-device config
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
